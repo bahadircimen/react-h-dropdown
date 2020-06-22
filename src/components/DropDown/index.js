@@ -9,7 +9,7 @@ import CheckBox from "../CheckBox";
 
 
 
-class Dropdown extends Component {
+class DropDown extends Component {
 
     render() {
         const {children, labelText} =this.props
@@ -26,4 +26,4 @@ class Dropdown extends Component {
     }
 }
 
-export default Dropdown;
+export default DropDown;

@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import Dropdown from "../components/Dropdown";
+import DropDown from "../components/DropDown";
 import selectUpOrange from "./svg/selectboxuporange.svg";
 import selectDown from "./svg/selectboxdown.svg";
 import selectDownOrange from "./svg/selectboxdownorange.svg";
@@ -7,7 +7,8 @@ import dropdownStar from "./svg/dropdownstar.svg";
 import styles from "./styles.scss";
 import CheckBox from "../components/CheckBox";
 import Search from "../components/Search";
-
+import {DropdownContainer} from "@cosmos/dropdown/src/Dropdown.styled";
+import Dropdown from "@cosmos/dropdown"
 
 class MainContainer extends Component {
 	constructor(props) {
@@ -113,7 +114,13 @@ class MainContainer extends Component {
 		console.log(this.filterRating());
 		return (
 			<Fragment>
-				<Dropdown labelText={"Filtrele"}>
+				{/*<div className={styles.loadingContainer}>*/}
+				{/*	<div className={styles.loading}></div>*/}
+				{/*</div>*/}
+				<Dropdown content={<div>sad</div>}>
+				<div>sdsad</div>
+				</Dropdown>
+				<DropDown labelText={"Filtrele"}>
 					<div key={0} className={styles.dropdownMain}>
 						<div className={styles.dropdownFilter} onClick={()=>this.changeVisible("rating")}>
 							<div style={visibleRating || rateFilter.length>0 ? {color:"#ff6000"}:null} className={styles.dropdownTextFilter}>Ürün Puanı</div>
@@ -176,7 +183,7 @@ class MainContainer extends Component {
 							<div style={{minHeight:"500px"}}>sad</div>
 						</div>
 					</div>
-				</Dropdown>
+				</DropDown>
 			</Fragment>
 		);
 	}
